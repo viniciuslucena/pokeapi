@@ -1,0 +1,94 @@
+:root {
+    --dark-grey: #1e1e1e;
+    --light: #e1e1e1;
+    --type-grass: #9dd465;
+}
+
+html, 
+body {
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--dark-grey);
+    color: var(--light);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: calc(25% - 20px);
+    margin: 10px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #3d3d3d;
+}
+
+.card .title h2 {
+    padding: 0;
+    margin: 0;
+    text-transform: capitalize;
+}
+
+.card .img {
+    margin: 40px auto;
+    height: 220px;
+    width: 220px;
+    border-radius: 50%;
+    background-color: var(--type-grass);
+}
+
+.card .img img {
+    max-width: 220px;
+}
+
+.card .type {
+    color: #1e1e1e;
+    border-radius: 10px;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    letter-spacing: 4px;
+    background-color: var(--type-grass);
+}
+
+.card .type p {
+    margin: 0;
+}
+
+.card .favorite {
+    display: none;
+}
+
+/* Até o tamanho de 1244px de Largunda -> Tablets */
+@media screen and (max-width: 1244px) {
+    .card {
+        width: calc(50% - 20px);
+    }
+}
+
+/* Até o tamanho de 768px de Largura -> Celulares */
+@media screen and (max-width: 768px) {
+    .card {
+        width: calc(100% - 20px);
+    }
+}
